@@ -1,0 +1,61 @@
+:root {
+  /* Brand Color Palette - Enterprise Corporate Specification */
+  --color-primary: #0B6E3C;
+  --color-primary-hover: #07522B;
+  --color-primary-light: #129452;
+  --color-secondary: #4CAF50;
+  --color-secondary-hover: #388E3C;
+  --color-accent: #FFC107;
+  --color-accent-hover: #E0A800;
+  
+  /* Background Neutrals */
+  --bg-main: #F8FAF8;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #F5F7F6;
+  --bg-dark: #072213;
+  --bg-dark-card: #0E361F;
+
+  /* Typography Colors */
+  --text-dark: #1A1A1A;
+  --text-main: #2A2A2A;
+  --text-muted: #555555;
+  --text-light: #888888;
+  --text-inverse: #FFFFFF;
+  --text-primary: #0B6E3C;
+
+  /* Borders & Glassmorphism */
+  --border-light: #E5E9E6;
+  --border-green: #C2E2D0;
+  --border-gold: #FFE082;
+
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(11, 110, 60, 0.08);
+
+  /* Radius & Shadows */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(11, 110, 60, 0.08);
+  --shadow-lg: 0 16px 36px rgba(11, 110, 60, 0.12);
+  --shadow-hover: 0 20px 40px rgba(11, 110, 60, 0.18);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[data-theme="dark"] {
+  --bg-main: #06180D;
+  --bg-surface: #0C2817;
+  --bg-surface-alt: #133821;
+  --text-dark: #F5F7F6;
+  --text-main: #E5E9E6;
+  --text-muted: #A0B0A5;
+  --border-light: #1B452A;
+  --glass-bg: rgba(12, 40, 23, 0.85);
+}

@@ -1,0 +1,908 @@
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes floatLeaf {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(6deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes digitalPulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes rippleEffect {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-float-leaf {
+  animation: floatLeaf 6s ease-in-out infinite;
+}
+
+.animate-digital-pulse {
+  animation: digitalPulse 4s ease-in-out infinite;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-container img {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.08);
+}
+
+/* Bottom-Left Corner Leaves Animation */
+@keyframes bottomLeftLeafSway {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: translateY(-4px) rotate(-2deg) scale(1.02);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(2.5deg) scale(1.04);
+  }
+
+  75% {
+    transform: translateY(-3px) rotate(-1deg) scale(1.01);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+}
+
+.peeking-leaf-animated {
+  position: absolute;
+  left: -10px;
+  bottom: -20px;
+  z-index: 10;
+  width: 100px;
+  height: auto;
+  pointer-events: none;
+  animation: bottomLeftLeafSway 5s ease-in-out infinite;
+  transform-origin: bottom left;
+  filter: drop-shadow(2px 6px 12px rgba(2, 176, 89, 0.2));
+}
+
+/* Premium Hero Banner Animations */
+
+/* 1. Soft Animated Sunrise Glow behind horizon */
+@keyframes sunriseGlowPulse {
+
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+    filter: blur(12px);
+  }
+
+  50% {
+    opacity: 0.85;
+    transform: scale(1.25);
+    filter: blur(18px);
+  }
+}
+
+.hero-sunrise-glow {
+  position: absolute;
+  left: 51.5%;
+  top: 35%;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 225, 120, 0.8) 0%, rgba(255, 175, 40, 0.4) 40%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+  animation: sunriseGlowPulse 5.5s ease-in-out infinite;
+}
+
+/* Floating Atmospheric Sunrise Particles */
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: translateY(-25px) translateX(15px);
+    opacity: 0.85;
+  }
+
+  100% {
+    transform: translateY(-50px) translateX(-10px);
+    opacity: 0;
+  }
+}
+
+.hero-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 10px rgba(255, 220, 150, 0.9);
+  pointer-events: none;
+  z-index: 2;
+  animation: particleFloat 7s ease-in-out infinite;
+}
+
+/* AI Crop Recommendation Cards Floating Motion */
+@keyframes aiCardFloat1 {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(-1deg);
+  }
+}
+
+@keyframes aiCardFloat2 {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-14px) rotate(1deg);
+  }
+}
+
+/* Natural Crop Field Wind Sway & Air Current Animations */
+@keyframes cropFieldSwayWave {
+  0% {
+    transform: skewX(0deg) scale(1, 1) translateY(0px);
+    opacity: 0.5;
+  }
+
+  25% {
+    transform: skewX(-4.5deg) scale(1.02, 0.98) translateY(-5px);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: skewX(3.5deg) scale(0.99, 1.01) translateY(-2px);
+    opacity: 0.95;
+  }
+
+  75% {
+    transform: skewX(-2deg) scale(1.01, 0.99) translateY(-4px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: skewX(0deg) scale(1, 1) translateY(0px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes airCurrentPass {
+  0% {
+    transform: translateX(120%) skewX(-15deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.65;
+  }
+
+  70% {
+    opacity: 0.45;
+  }
+
+  100% {
+    transform: translateX(-120%) skewX(-15deg);
+    opacity: 0;
+  }
+}
+
+.hero-crop-breeze-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 55%;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(34, 197, 94, 0.12) 40%, rgba(16, 185, 129, 0.06) 70%, rgba(255, 255, 255, 0) 100%);
+  animation: cropFieldSwayWave 4.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  transform-origin: bottom right;
+  mix-blend-mode: overlay;
+}
+
+.hero-crop-wind-wave {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  width: 55%;
+  height: 42%;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(ellipse at bottom right, rgba(187, 247, 208, 0.35) 0%, rgba(34, 197, 94, 0.1) 50%, transparent 80%);
+  animation: cropFieldSwayWave 6.2s ease-in-out infinite 0.8s;
+  transform-origin: bottom center;
+}
+
+.hero-crop-air-currents {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 65%;
+  height: 48%;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.22) 45%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.22) 55%, transparent 100%);
+  animation: airCurrentPass 5.5s ease-in-out infinite;
+  mix-blend-mode: soft-light;
+}
+
+/* Agri-AI Tech Rings Moveable Illusion Animations */
+@keyframes techRingRotateCW {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes techRingRotateCCW {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes techRingPulseGlow {
+
+  0%,
+  100% {
+    transform: scale(0.96);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: 0.95;
+  }
+}
+
+/* Agri-AI Tech Rings Moveable Illusion Animations */
+@keyframes techRingRotateCW {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes techRingRotateCCW {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes techRingPulseGlow {
+
+  0%,
+  100% {
+    transform: scale(0.96);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: 0.95;
+  }
+}
+
+.hero-tech-rings-container {
+  position: absolute;
+  left: 40%;
+  top: -40px;
+  width: 680px;
+  height: 680px;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.tech-ring-outer-cw {
+  transform-origin: 340px 340px;
+  animation: techRingRotateCW 32s linear infinite;
+}
+
+.tech-ring-mid-ccw {
+  transform-origin: 340px 340px;
+  animation: techRingRotateCCW 24s linear infinite;
+}
+
+.hero-smart-farmer-overlay {
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  height: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 3;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.25));
+}
+
+/* Flying Drone & Rapid Propeller Rotation Animations */
+@keyframes droneFlyHover {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: translateY(-14px) rotate(1.5deg) scale(1.02);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(-1.2deg) scale(1);
+  }
+
+  75% {
+    transform: translateY(-18px) rotate(1deg) scale(1.03);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes propBladesSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hero-flying-drone-wrapper {
+  position: absolute;
+  right: 2.5%;
+  top: 12%;
+  width: 240px;
+  height: 150px;
+  pointer-events: none;
+  z-index: 3;
+  animation: droneFlyHover 4.5s ease-in-out infinite;
+}
+
+.hero-drone-body-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.35));
+}
+
+.drone-propeller-spin {
+  position: absolute;
+  width: 54px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.5) 65%, transparent 85%);
+  animation: propBladesSpin 0.1s linear infinite;
+  transform-origin: center;
+  mix-blend-mode: multiply;
+}
+
+/* =======================================================
+   Modern Speed-Dial Radial Arc Floating Contact Widget
+   ======================================================= */
+
+/* Radar / Circular Wipe Animations */
+@keyframes radarWipeSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes radarRingPulse1 {
+
+  0%,
+  100% {
+    transform: scale(0.96);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: 0.75;
+  }
+}
+
+@keyframes radarRingPulse2 {
+
+  0%,
+  100% {
+    transform: scale(0.97);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+/* Root Speed-Dial Container */
+.radar-speeddial-root {
+  position: relative;
+  z-index: 9999;
+}
+
+/* SVG Dotted Curved Arc Connector Overlay */
+.radial-arc-svg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9996;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.radial-arc-svg.active-arc {
+  opacity: 0.85;
+}
+
+/* =========================================================================
+   Modern Enterprise Floating Action Menu (FAB Layout)
+   ========================================================================= */
+
+@keyframes fabRadarSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fabRingPulse1 {
+
+  0%,
+  100% {
+    transform: scale(0.96);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 0.7;
+  }
+}
+
+@keyframes fabRingPulse2 {
+
+  0%,
+  100% {
+    transform: scale(0.97);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: scale(1.14);
+    opacity: 0.55;
+  }
+}
+
+@keyframes fabRingPulse3 {
+
+  0%,
+  100% {
+    transform: scale(0.98);
+    opacity: 0.18;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.45;
+  }
+}
+
+.fab-menu-root {
+  position: relative;
+  z-index: 9999;
+}
+
+/* 50px Main FAB Container (Bottom Right Corner: 24px x 24px) */
+.fab-main-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3 Concentric Radar Rings & Wiper Beam Overlay */
+.fab-radar-rings {
+  position: absolute;
+  inset: -21px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.fab-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 9px rgba(19, 138, 54, 0.25);
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.fab-ring-1 {
+  width: 64px;
+  height: 64px;
+  animation: fabRingPulse1 2s ease-in-out infinite;
+}
+
+.fab-ring-2 {
+  width: 78px;
+  height: 78px;
+  animation: fabRingPulse2 2.2s ease-in-out infinite 0.3s;
+}
+
+.fab-ring-3 {
+  width: 92px;
+  height: 92px;
+  animation: fabRingPulse3 2.5s ease-in-out infinite 0.6s;
+}
+
+/* Radar Wiper Beam (Clockwise Sweep) */
+.fab-radar-beam {
+  position: absolute;
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0.55) 0deg,
+    rgba(74, 222, 128, 0.35) 45deg,
+    rgba(19, 138, 54, 0.15) 85deg,
+    transparent 130deg,
+    transparent 360deg
+  );
+  animation: fabRadarSweep 2s linear infinite;
+  pointer-events: none;
+}
+
+/* Hover on main container brightens radar rings */
+.fab-main-container:hover .fab-ring {
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 13px rgba(19, 138, 54, 0.45);
+}
+
+.fab-main-container:hover .fab-radar-beam {
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0.75) 0deg,
+    rgba(74, 222, 128, 0.5) 50deg,
+    rgba(19, 138, 54, 0.25) 90deg,
+    transparent 140deg,
+    transparent 360deg
+  );
+}
+
+/* Main Green 50px Circular FAB Trigger Button */
+.fab-main-trigger {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #138A36;
+  color: #FFFFFF;
+  border: 2.5px solid #FFFFFF;
+  box-shadow: 0 9px 24px rgba(0, 0, 0, 0.18), 0 0 20px rgba(19, 138, 54, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.fab-main-trigger:hover {
+  transform: scale(1.08);
+  box-shadow: 0 13px 30px rgba(0, 0, 0, 0.22), 0 0 26px rgba(19, 138, 54, 0.65);
+}
+
+.fab-main-trigger.active {
+  background-color: #138A36;
+  transform: scale(1.05);
+}
+
+.fab-trigger-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fab-main-trigger.active .fab-trigger-icon {
+  transform: rotate(180deg);
+}
+
+/* =========================================================================
+   Handwritten Sketch Directional Offsets (Balanced Spacing)
+   ========================================================================= */
+
+.fab-option-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 1. Email (Mail) — 180° = Directly LEFT */
+.fab-option-wrapper.pos-email-topleft {
+  transform: translate(-50%, -50%) translate(-64px, 0px) scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+.fab-option-wrapper.pos-email-topleft.open {
+  transform: translate(-50%, -50%) translate(-64px, 0px) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 2. Chat (Message Bubble) — 135° = Diagonal Upper-Left */
+.fab-option-wrapper.pos-chat-top {
+  transform: translate(-50%, -50%) translate(-45px, -45px) scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+.fab-option-wrapper.pos-chat-top.open {
+  transform: translate(-50%, -50%) translate(-45px, -45px) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 3. Phone (Receiver) — 90° = Directly UP */
+.fab-option-wrapper.pos-phone-right {
+  transform: translate(-50%, -50%) translate(0px, -64px) scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+.fab-option-wrapper.pos-phone-right.open {
+  transform: translate(-50%, -50%) translate(0px, -64px) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 38px Circular Green Option Button */
+.fab-option-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #138A36;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+}
+
+.fab-option-wrapper:hover .fab-option-btn {
+  transform: scale(1.1);
+  box-shadow: 0 11px 24px rgba(0, 0, 0, 0.2), 0 0 17px rgba(19, 138, 54, 0.5);
+}
+
+/* Glassmorphism Hover Tooltip (Appears ONLY on Hover) */
+.fab-tooltip {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.98);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0F172A;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+
+.fab-option-wrapper:hover .fab-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Tooltip Positioning */
+.fab-tooltip.tooltip-above {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+}
+
+.fab-tooltip.tooltip-left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 8px;
+}
+
+.fab-option-wrapper:hover .fab-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Tooltip Positioning */
+.fab-tooltip.tooltip-above {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+}
+
+.fab-tooltip.tooltip-right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+}
+
+/* Responsive Rules for Mobile Devices */
+@media (max-width: 768px) {
+  .fab-main-container {
+    bottom: 24px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .fab-main-trigger {
+    width: 64px;
+    height: 64px;
+  }
+
+  .fab-option-btn {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+
+/* Hover: Lift 6px and increase shadow */
+.radial-option-wrapper:hover .radial-option-btn {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22), 0 0 24px rgba(19, 138, 54, 0.55);
+}
+
+/* Responsive Styles for Mobile & Tablet */
+@media (max-width: 768px) {
+  .radar-main-button-wrapper {
+    bottom: 24px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .radar-main-trigger {
+    width: 64px;
+    height: 64px;
+  }
+
+  .radial-option-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Hide labels on small mobile screens */
+  .radial-option-label {
+    display: none !important;
+  }
+}
