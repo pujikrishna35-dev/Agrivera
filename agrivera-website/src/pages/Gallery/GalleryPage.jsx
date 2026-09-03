@@ -9,7 +9,7 @@ export const GalleryPage = () => {
     <MainLayout>
       <SeoMeta title="Gallery & Field Trials" description="Photo and video gallery of Agrivera crop demonstrations, drone spraying, and farmer meets." />
       
-      <div style={{ backgroundColor: '#F1F7F2', padding: '3rem 0' }}>
+      <div style={{ backgroundColor: '#F1F7F2', padding: '6.5rem 0 3rem 0' }}>
         <div className="container">
           <Breadcrumb items={[{ label: 'Gallery' }]} />
           <h1 style={{ color: 'var(--color-primary)', fontSize: '2.5rem', fontWeight: 800 }}>Field Gallery & Demonstrations</h1>

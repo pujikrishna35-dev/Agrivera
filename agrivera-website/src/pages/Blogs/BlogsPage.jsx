@@ -11,7 +11,7 @@ export const BlogsPage = () => {
     <MainLayout>
       <SeoMeta title="Agricultural News & Blogs" description="Latest farming news, pest management advisories and crop nutrition insights from Agrivera experts." />
       
-      <div style={{ backgroundColor: '#F1F7F2', padding: '3rem 0' }}>
+      <div style={{ backgroundColor: '#F1F7F2', padding: '6.5rem 0 3rem 0' }}>
         <div className="container">
           <Breadcrumb items={[{ label: 'Blogs & Articles' }]} />
           <h1 style={{ color: 'var(--color-primary)', fontSize: '2.5rem', fontWeight: 800 }}>Agronomy News & Resources</h1>
@@ -26,7 +26,12 @@ export const BlogsPage = () => {
           <div className="grid-2" style={{ gap: '2rem' }}>
             {BLOGS_DATA.map(blog => (
               <div key={blog.id} className="card-hover" style={{ backgroundColor: '#FFF', borderRadius: '16px', border: '1px solid var(--border-light)', overflow: 'hidden' }}>
-                <img src={blog.image} alt={blog.title} style={{ width: '100%', height: '220px', objectFit: 'cover' }} />
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  onError={(e) => { e.target.onerror = null; e.target.src = '/images/category_nutrition.png'; }}
+                  style={{ width: '100%', height: '220px', objectFit: 'cover' }}
+                />
                 <div style={{ padding: '1.75rem' }}>
                   <div style={{ display: 'flex', gap: '1rem', fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '0.6rem' }}>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}><Calendar size={14} /> {blog.date}</span>

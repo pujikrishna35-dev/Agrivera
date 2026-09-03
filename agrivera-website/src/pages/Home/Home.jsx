@@ -12,7 +12,6 @@ import InnovationTimeline from '../../components/timeline/InnovationTimeline';
 import ManufacturingProcess from '../../components/manufacturing/ManufacturingProcess';
 import ImpactSection from '../../components/impact/ImpactSection';
 import DownloadCatalogueBanner from '../../components/catalogue/DownloadCatalogueBanner';
-import ContactCTA from './ContactCTA';
 import SeoMeta from '../../components/seo/SeoMeta';
 
 export const Home = () => {
@@ -37,7 +36,6 @@ export const Home = () => {
       <ManufacturingProcess />
       <ImpactSection />
       <DownloadCatalogueBanner />
-      <ContactCTA />
     </MainLayout>
   );
 };

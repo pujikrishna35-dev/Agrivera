@@ -10,7 +10,7 @@ export const Contact = () => {
     <MainLayout>
       <SeoMeta title="Contact Us" description="Get in touch with Agrivera Crop Solutions. Phone support, office addresses and agronomy assistance." />
       
-      <div style={{ backgroundColor: '#F1F7F2', padding: '3rem 0' }}>
+      <div style={{ backgroundColor: '#F1F7F2', padding: '6.5rem 0 3rem 0' }}>
         <div className="container">
           <Breadcrumb items={[{ label: 'Contact Us' }]} />
           <h1 style={{ color: 'var(--color-primary)', fontSize: '2.5rem', fontWeight: 800 }}>Contact Agrivera Experts</h1>

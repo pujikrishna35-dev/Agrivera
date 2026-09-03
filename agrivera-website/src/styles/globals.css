@@ -42,6 +42,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .container {
@@ -115,6 +119,8 @@ img {
   text-align: center;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
+  background-clip: padding-box;
 }
 
 .btn-primary {

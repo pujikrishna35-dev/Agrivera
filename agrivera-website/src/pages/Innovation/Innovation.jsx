@@ -9,7 +9,7 @@ export const Innovation = () => {
     <MainLayout>
       <SeoMeta title="Innovation & R&D" description="Agricultural biotechnology, precision drone application, nano-nutrients and modern smart farming." />
       
-      <div style={{ backgroundColor: '#F1F7F2', padding: '3rem 0' }}>
+      <div style={{ backgroundColor: '#F1F7F2', padding: '6.5rem 0 3rem 0' }}>
         <div className="container">
           <Breadcrumb items={[{ label: 'Innovation' }]} />
           <h1 style={{ color: 'var(--color-primary)', fontSize: '2.5rem', fontWeight: 800 }}>Pioneering Agricultural Innovation</h1>

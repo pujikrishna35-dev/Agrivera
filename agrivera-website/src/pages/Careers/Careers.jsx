@@ -15,7 +15,7 @@ export const Careers = () => {
     <MainLayout>
       <SeoMeta title="Careers" description="Join the Agrivera team! Explore careers in agronomy, agricultural sales, and biotechnology research." />
       
-      <div style={{ backgroundColor: '#F1F7F2', padding: '3rem 0' }}>
+      <div style={{ backgroundColor: '#F1F7F2', padding: '6.5rem 0 3rem 0' }}>
         <div className="container">
           <Breadcrumb items={[{ label: 'Careers' }]} />
           <h1 style={{ color: 'var(--color-primary)', fontSize: '2.5rem', fontWeight: 800 }}>Work With Us</h1>

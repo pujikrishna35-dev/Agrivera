@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PRODUCTS_DATA } from '../../data/products';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Download, ChevronLeft, ChevronRight, Leaf, Star, Sprout } from 'lucide-react';
+import { ArrowRight, Download, ChevronLeft, ChevronRight, Leaf, Sprout } from 'lucide-react';
 
 export const ProductSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,25 +77,6 @@ export const ProductSlider = () => {
 
             {/* Product Info */}
             <div>
-              {/* Top Gold Badge */}
-              <div style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.35rem',
-                backgroundColor: '#FEF3C7',
-                color: '#D97706',
-                border: '1px solid #FDE68A',
-                borderRadius: '20px',
-                padding: '0.35rem 0.9rem',
-                fontSize: '0.78rem',
-                fontWeight: 800,
-                letterSpacing: '0.04em',
-                textTransform: 'uppercase'
-              }}>
-                <Star size={13} fill="#D97706" color="#D97706" />
-                {currentProduct.badge || 'HIGH YIELD FORMULA'}
-              </div>
-
               {/* Title */}
               <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0.35rem 0', lineHeight: 1.25 }}>
                 {currentProduct.name}

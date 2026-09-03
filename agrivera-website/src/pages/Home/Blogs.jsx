@@ -148,9 +148,9 @@ export const Blogs = () => {
               </p>
             </div>
 
-            <a
-              href="#download"
-              onClick={(e) => { e.preventDefault(); alert('Agrivera Product Catalog PDF downloaded!'); }}
+            <button
+              type="button"
+              onClick={() => alert('Agrivera Product Catalog PDF downloaded!')}
               style={{
                 backgroundColor: '#FFC107',
                 color: '#072213',
@@ -169,7 +169,7 @@ export const Blogs = () => {
               }}
             >
               Download PDF Catalog <Download size={16} />
-            </a>
+            </button>
           </div>
         </div>
 

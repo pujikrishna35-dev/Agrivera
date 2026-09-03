@@ -18,7 +18,7 @@ export const CropSolutionsPage = () => {
     <MainLayout>
       <SeoMeta title="Crop Solutions & Advisory" description="Crop-wise advisory, pest control schedules and nutrient solutions for Paddy, Cotton, Maize, Vegetables and cash crops." />
       
-      <div style={{ backgroundColor: '#F1F7F2', padding: '3rem 0' }}>
+      <div style={{ backgroundColor: '#F1F7F2', padding: '6.5rem 0 3rem 0' }}>
         <div className="container">
           <Breadcrumb items={[{ label: 'Crop Solutions' }]} />
           <h1 style={{ color: 'var(--color-primary)', fontSize: '2.5rem', fontWeight: 800 }}>Crop Wise Advisory & Solutions</h1>
@@ -72,6 +72,7 @@ export const CropSolutionsPage = () => {
                 <img
                   src={selectedCrop.image}
                   alt={selectedCrop.name}
+                  onError={(e) => { e.target.onerror = null; e.target.src = '/images/paddy_field_trials.png'; }}
                   style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '16px' }}
                 />
               </div>

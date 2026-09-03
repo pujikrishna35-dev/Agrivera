@@ -25,7 +25,7 @@ export const DealerNetwork = () => {
     <MainLayout>
       <SeoMeta title="Dealer Network & Partnership" description="Locate 200+ authorized Agrivera dealers across India or apply to become a franchisee distributor." />
       
-      <div style={{ backgroundColor: '#F1F7F2', padding: '3rem 0' }}>
+      <div style={{ backgroundColor: '#F1F7F2', padding: '6.5rem 0 3rem 0' }}>
         <div className="container">
           <Breadcrumb items={[{ label: 'Dealer Network' }]} />
           <h1 style={{ color: 'var(--color-primary)', fontSize: '2.5rem', fontWeight: 800 }}>Pan-India Dealer Network</h1>

@@ -275,7 +275,7 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/blogs" style={{ color: '#CBD5E1', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                <Link to="/products" style={{ color: '#CBD5E1', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
                   <ChevronRight size={14} color="#22C55E" /> Product Catalog
                 </Link>
               </li>
@@ -285,7 +285,7 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/faq" style={{ color: '#CBD5E1', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                <Link to="/knowledge-center" style={{ color: '#CBD5E1', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
                   <ChevronRight size={14} color="#22C55E" /> Downloads
                 </Link>
               </li>

@@ -23,7 +23,7 @@ export const ProductDetails = () => {
     <MainLayout>
       <SeoMeta title={product.name} description={product.description} />
       
-      <div style={{ backgroundColor: '#F1F7F2', padding: '2.5rem 0' }}>
+      <div style={{ backgroundColor: '#F1F7F2', padding: '6.5rem 0 2.5rem 0' }}>
         <div className="container">
           <Breadcrumb items={[{ label: 'Products', link: '/products' }, { label: product.name }]} />
         </div>
@@ -41,7 +41,6 @@ export const ProductDetails = () => {
             </div>
 
             <div>
-              <span className="badge badge-primary" style={{ marginBottom: '0.8rem' }}>{product.badge}</span>
               <h1 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#0A2312', marginBottom: '0.5rem' }}>
                 {product.name}
               </h1>
@@ -49,9 +48,6 @@ export const ProductDetails = () => {
                 {product.tagline}
               </p>
 
-              <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--color-primary)', marginBottom: '1.5rem' }}>
-                {formatCurrency(product.price)}
-              </div>
 
               <p style={{ color: 'var(--text-main)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
                 {product.description}

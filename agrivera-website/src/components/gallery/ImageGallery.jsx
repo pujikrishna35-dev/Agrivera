@@ -14,7 +14,12 @@ export const ImageGallery = () => {
     <div className="grid-3">
       {images.map((item, idx) => (
         <div key={idx} style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', height: '220px' }}>
-          <img src={item.url} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s ease' }} />
+          <img
+            src={item.url}
+            alt={item.title}
+            onError={(e) => { e.target.onerror = null; e.target.src = '/images/paddy_field_trials.png'; }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s ease' }}
+          />
           <div style={{
             position: 'absolute',
             inset: 0,

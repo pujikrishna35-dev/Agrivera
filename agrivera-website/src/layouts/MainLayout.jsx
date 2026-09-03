@@ -68,7 +68,7 @@ export const MainLayout = ({ children }) => {
                       <img src={item.image} alt={item.name} style={{ width: '50px', height: '50px', objectFit: 'cover', borderRadius: '6px' }} />
                       <div style={{ flex: 1 }}>
                         <h5 style={{ margin: 0, fontSize: '0.9rem' }}>{item.name}</h5>
-                        <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-muted)' }}>{item.quantity} x {formatCurrency(item.price)}</p>
+                        <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-muted)' }}>Quantity: {item.quantity}</p>
                       </div>
                       <button onClick={() => dispatch(removeFromCart(item.id))} style={{ color: '#EF4444', cursor: 'pointer' }}>
                         <X size={16} />
@@ -81,9 +81,9 @@ export const MainLayout = ({ children }) => {
 
             {cart.items.length > 0 && (
               <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '1rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 800, fontSize: '1.1rem', marginBottom: '1rem' }}>
-                  <span>Total Amount:</span>
-                  <span style={{ color: 'var(--color-primary)' }}>{formatCurrency(totalAmount)}</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 800, fontSize: '1rem', marginBottom: '1rem' }}>
+                  <span>Total Selected Items:</span>
+                  <span style={{ color: 'var(--color-primary)' }}>{cart.items.reduce((sum, item) => sum + item.quantity, 0)}</span>
                 </div>
                 <button
                   onClick={() => alert('Order inquiry dispatched to nearest AGRIVERA dealer network!')}

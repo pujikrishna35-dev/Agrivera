@@ -9,6 +9,7 @@ import Innovation from '../pages/Innovation/Innovation';
 import DealerNetwork from '../pages/DealerNetwork/DealerNetwork';
 import KnowledgeCenter from '../pages/KnowledgeCenter/KnowledgeCenter';
 import BlogsPage from '../pages/Blogs/BlogsPage';
+import BlogDetails from '../pages/Blogs/BlogDetails';
 import Careers from '../pages/Careers/Careers';
 import Contact from '../pages/Contact/Contact';
 import GalleryPage from '../pages/Gallery/GalleryPage';
@@ -28,6 +29,7 @@ export const AppRoutes = () => {
       <Route path={ROUTES.DEALER_NETWORK} element={<DealerNetwork />} />
       <Route path={ROUTES.KNOWLEDGE_CENTER} element={<KnowledgeCenter />} />
       <Route path={ROUTES.BLOGS} element={<BlogsPage />} />
+      <Route path={ROUTES.BLOG_DETAILS} element={<BlogDetails />} />
       <Route path={ROUTES.CAREERS} element={<Careers />} />
       <Route path={ROUTES.CONTACT} element={<Contact />} />
       <Route path={ROUTES.GALLERY} element={<GalleryPage />} />

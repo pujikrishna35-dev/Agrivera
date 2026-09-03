@@ -55,7 +55,6 @@ export const DownloadCatalogueBanner = () => {
               letterSpacing: '0.05em',
               marginBottom: '1.2rem'
             }}>
-              <BookOpen size={14} color="#EAB308" /> FREE OFFICIAL RESOURCES
             </div>
 
             {/* Main Headline */}

@@ -10,7 +10,7 @@ export const KnowledgeCenter = () => {
     <MainLayout>
       <SeoMeta title="Knowledge Center" description="Farmers resource center: spray guides, dosage tables, field videos and pest identification." />
       
-      <div style={{ backgroundColor: '#F1F7F2', padding: '3rem 0' }}>
+      <div style={{ backgroundColor: '#F1F7F2', padding: '6.5rem 0 3rem 0' }}>
         <div className="container">
           <Breadcrumb items={[{ label: 'Knowledge Center' }]} />
           <h1 style={{ color: 'var(--color-primary)', fontSize: '2.5rem', fontWeight: 800 }}>Farmer Knowledge Center</h1>
@@ -41,7 +41,7 @@ export const KnowledgeCenter = () => {
               <Download size={36} color="var(--color-primary)" style={{ marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>Dosage Charts</h3>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.4rem' }}>Download PDF spray schedules.</p>
-              <a href="#download" onClick={e => { e.preventDefault(); alert('Dosage Chart PDF Downloaded!'); }} className="btn btn-gold btn-sm" style={{ marginTop: '1rem' }}>Download PDF</a>
+              <button type="button" onClick={() => alert('Dosage Chart PDF Downloaded!')} className="btn btn-gold btn-sm" style={{ marginTop: '1rem' }}>Download PDF</button>
             </div>
 
             <div style={{ backgroundColor: '#FFF', padding: '2rem', borderRadius: '16px', border: '1px solid var(--border-light)', textAlign: 'center' }}>
