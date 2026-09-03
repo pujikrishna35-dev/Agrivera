@@ -4,7 +4,7 @@ import { Phone, ChevronDown, Sprout, Menu, X } from 'lucide-react';
 import { useScroll } from '../../hooks/useScroll';
 
 export const Navbar = () => {
-  const { scrolled } = useScroll();
+  const { scrolled, visible } = useScroll();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
@@ -12,27 +12,34 @@ export const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
+  // Header should be visible if user is at top, scrolling up, or mobile menu is active
+  const isNavVisible = visible || mobileMenuOpen;
+
   return (
     <header style={{
-      position: 'absolute',
+      position: 'fixed',
       top: '0.75rem',
       left: 0,
       zIndex: 1000,
       width: '100%',
       padding: '0 1.5rem',
-      boxSizing: 'border-box'
+      boxSizing: 'border-box',
+      transform: isNavVisible ? 'translateY(0)' : 'translateY(-140%)',
+      opacity: isNavVisible ? 1 : 0,
+      pointerEvents: isNavVisible ? 'auto' : 'none',
+      transition: 'transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease'
     }}>
       {/* Floating Translucent Glass Navigation Bar */}
       <nav style={{
         maxWidth: '1360px',
         margin: '0 auto',
-        backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.88)' : 'rgba(255, 255, 255, 0.75)',
+        backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.94)' : 'rgba(255, 255, 255, 0.78)',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
         borderRadius: '18px',
-        border: '1px solid rgba(255, 255, 255, 0.85)',
-        boxShadow: scrolled ? '0 12px 35px rgba(0, 0, 0, 0.1)' : '0 8px 30px rgba(0, 0, 0, 0.06)',
-        transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+        border: scrolled ? '1px solid rgba(226, 232, 240, 0.9)' : '1px solid rgba(255, 255, 255, 0.85)',
+        boxShadow: scrolled ? '0 12px 36px rgba(0, 0, 0, 0.12)' : '0 8px 30px rgba(0, 0, 0, 0.06)',
+        transition: 'background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease',
         padding: '0.75rem 1.6rem'
       }}>
         <div style={{
